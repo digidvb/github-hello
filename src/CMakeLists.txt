@@ -1,0 +1,5 @@
+set(CMAKE_GO_FLAGS "-a" "-installsuffix" "cgo" "-ldflags" "-extldflags '-static'")
+set(ENV{CGO_ENABLED} 0)
+set(ENV{GOOS} linux)
+set(SOURCE_FILE main.go)
+add_go_executable(hello ${SOURCE_FILE})
