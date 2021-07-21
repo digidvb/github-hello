@@ -8,4 +8,5 @@ RUN mkdir build && cd build && cmake .. && make && make install
 FROM scratch
 WORKDIR /app
 COPY --from=build-env /usr/local/bin/hello .
+EXPOSE 8080
 ENTRYPOINT [ "./hello" ]
